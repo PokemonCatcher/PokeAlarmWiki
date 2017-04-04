@@ -120,7 +120,7 @@ Below is an example of the Default level options:
             "min_dist":"0", "max_dist":"inf", "min_iv":"0", "max_iv":"100",
             "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
             "quick_move": null, "charge_move": null, "moveset": null,
-            "size": null, "ignore_missing": "False"
+            "size": null, "gender": null, "ignore_missing": "False"
         },
 ```
 
@@ -143,6 +143,7 @@ Below is a description of all filters available at both Default and Specific Pok
 | `moveset` |  | Combination of `quick_move` and `charge_move`, useful for filtering on best attacking or defending moves. Format is`"moveset":[ "QUICK_MOVE_NAME/CHARGE_MOVE_NAME" ]`. Example - `"moveset":[ "Dragon Breath/Dragon Claw", "Steel Wing/Dragon Pulse" ]`
 | `ignore_missing` | `True` | Prevents PokeAlarm from notifying on Pokemon without moves or IVs.  WARNING: enabling this could potentially result in losing a snorlax, lapras, dragonite, etc., if RocketMap screws up and sends the webhook without info. A better way is to configure your blacklist or whitelist in RocketMap and set the unwanted Pokemon in filters.json to `False`.
 | `size` | `null` | Useful for the tiny Rattata and big Magikarp badges.  Filter with  `"Tiny`, `"Small"`, `"Normal"`, `"Large"`, and `"Big"`
+| `gender` | `null` | Useful to collect pairs of pokemon.  Filter with  `"male`, `"female"`, and `"neutral"`
 | `ignore_missing` | `True` | Prevents PokeAlarm from notifying on Pokemon without moves or IVs.  WARNING: enabling this could potentially result in losing a snorlax, lapras, dragonite, etc., if RocketMap errors and sends the snorlax webhook without info. A better way is to configure your blacklist or whitelist in RocketMap and set the unwanted Pokemon in filters.json to `False`.
   
 ### Example Pokemon Config
@@ -155,7 +156,7 @@ By default, PokeAlarm will notify on any Pokemon set to `"True"`, at any distanc
             "min_dist":"0", "max_dist":"inf", "min_iv":"0", "max_iv":"100",
             "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
             "quick_move": null, "charge_move": null, "moveset": null,
-            "size": null, "ignore_missing": "False"
+            "size": null, "gender": null, "ignore_missing": "False"
         },
         "Bulbasaur":"True",
         "Ivysaur":"False",
@@ -171,7 +172,7 @@ By default, PokeAlarm will notify on any Pokemon set to `"True"`, at any distanc
             "min_dist":"0", "max_dist":"5000", "min_iv":"0", "max_iv":"100",
             "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
             "quick_move": null, "charge_move": null, "moveset": null,
-            "size": null, "ignore_missing": "False"
+            "size": null, "gender": null, "ignore_missing": "False"
         },
         "Bulbasaur":"True",
         "Ivysaur":"False",
@@ -187,7 +188,7 @@ By default, PokeAlarm will notify on any Pokemon set to `"True"`, at any distanc
             "min_dist":"0", "max_dist":"5000", "min_iv":"90", "max_iv":"100",
             "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
             "quick_move": null, "charge_move": null, "moveset": null,
-            "size": null, "ignore_missing": "False"
+            "size": null, "gender": null, "ignore_missing": "False"
         },
         "Bulbasaur":"True",
         "Ivysaur":"False",
@@ -208,7 +209,7 @@ At the lower specific Pokemon level, each Pokemon can have a configuration that 
             "min_dist":"0", "max_dist":"5000", "min_iv":"90", "max_iv":"100",
             "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
             "quick_move": null, "charge_move": null, "moveset": null,
-            "size": null, "ignore_missing": "False"
+            "size": null, "gender": null, "ignore_missing": "False"
         },
         "Bulbasaur":{ "max_dist":"1000" },
         "Ivysaur":"False",
@@ -225,7 +226,7 @@ At the lower specific Pokemon level, each Pokemon can have a configuration that 
             "min_dist":"0", "max_dist":"5000", "min_iv":"90", "max_iv":"100",
             "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
             "quick_move": null, "charge_move": null, "moveset": null,
-            "size": null, "ignore_missing": "False"
+            "size": null, "gender": null, "ignore_missing": "False"
         },
         "Bulbasaur":{ "min_iv":"100" },
         "Ivysaur":"False",
@@ -243,7 +244,7 @@ At the lower specific Pokemon level, each Pokemon can have a configuration that 
             "min_dist":"0", "max_dist":"5000", "min_iv":"90", "max_iv":"100",
             "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
             "quick_move": null, "charge_move": null, "moveset": null,
-            "size": null, "ignore_missing": "False"
+            "size": null, "gender": null, "ignore_missing": "False"
         },
         "Bulbasaur":{ "quick_move": ["Power Whip", "Seed Bomb"] },
         "Ivysaur":"False",
@@ -263,7 +264,7 @@ At the lower specific Pokemon level, each Pokemon can have a configuration that 
             "min_dist":"0", "max_dist":"5000", "min_iv":"90", "max_iv":"100",
             "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
             "quick_move": null, "charge_move": null, "moveset": null,
-            "size": null, "ignore_missing": "False"
+            "size": null, "gender": null, "ignore_missing": "False"
         },
         "Bulbasaur":{ "moveset": ["Vine Whip/Seed Bomb", "Tackle/Power Whip"] },
         "Ivysaur":"False",
@@ -280,7 +281,7 @@ At the lower specific Pokemon level, each Pokemon can have a configuration that 
             "min_dist":"0", "max_dist":"5000", "min_iv":"90", "max_iv":"100",
             "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
             "quick_move": null, "charge_move": null, "moveset": null,
-            "size": null, "ignore_missing": "False"
+            "size": null, "gender": null, "ignore_missing": "False"
         },
         "Bulbasaur":{ "max_dist":"1000", "min_iv":"100", "charge_move":["Power Whip", "Seed Bomb"] },
         "Ivysaur":"False",
@@ -304,7 +305,7 @@ we would configure our `filters.json` for Bulbasaur like so:
             "min_dist":"0", "max_dist":"5000", "min_iv":"90", "max_iv":"100",
             "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
             "quick_move": null, "charge_move": null, "moveset": null,
-            "size": null, "ignore_missing": "False"
+            "size": null, "gender": null, "ignore_missing": "False"
         },
         "Bulbasaur": [
             { "max_dist":"1000", "min_iv":"100", "charge_move":["Power Whip", "Seed Bomb"] },
@@ -324,6 +325,16 @@ Example:  Filtering for tiny Ratatta or big Magikarp
 ```json
 "Rattata":{"size":["Tiny"] },
 "Magikarp":{ "size":["Big"] },
+```
+
+**Filtering on gender.**
+
+You may filter on pokemon gender.  Options are: `"male"`, `"female"` or `"neutral"`.  Options must be wrapped in `[ ]`, similar to `quick_move`, `charge_move`, and `moveset`.
+
+Example: Filtering for female Venusaur or male Pikachu:
+```json
+"Venusaur":{"gender":["female"] },
+"Pikachu":{ "gender":["male"] },
 ```
 
 ## Final Words
