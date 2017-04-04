@@ -116,9 +116,9 @@ Below is an example of the Default level options:
 ```json
     "pokemon":{
         "enabled":"True",
-        "default": {
+        "default":{
             "min_dist":"0", "max_dist":"inf", "min_iv":"0", "max_iv":"100",
-            "min_atk": "0", "max_atk":"15", "min_def": "0", "max_def":"15", "min_sta": "0", "max_sta":"15",
+            "min_atk":"0", "max_atk":"15", "min_def":"0", "max_def":"15", "min_sta":"0", "max_sta":"15",
             "quick_move": null, "charge_move": null, "moveset": null,
             "size": null, "gender": null, "ignore_missing": "False"
         },
