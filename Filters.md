@@ -128,7 +128,7 @@ Below is a description of all filters available at both Default and Specific Pok
 
 | Parameter  | Default | Description |
 |:-----------|:--------|:------------------------------------------------------------|
-| `min_dist` | `"0"`   | Minimum distance from current location by which all Pokemon will trigger configured alarm(s).  Pokemon farther than this value will not trigger configured alarm(s). Can be an integer, e.g., `"1000".
+| `min_dist` | `"0"`   | Minimum distance from current location by which all Pokemon will trigger configured alarm(s).  Pokemon farther than this value will not trigger configured alarm(s). Can be an integer, e.g., `"1000"`.
 | `max_dist` | `"inf"`  | Maximum distance from current location by which the specific Pokemon will trigger configured alarm(s). Pokemon farther than this value will not trigger configured alarm(s). Can be an integer, e.g., `"1000"`, or `"inf"` for unlimited range.
 | `min_iv`   | `"0"`   | Minimum percent IV for all Pokemon. 0 to 100.
 | `max_iv`   | `"100"` | Maximum percent IV for all Pokemon. 0 to 100.
